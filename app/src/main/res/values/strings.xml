@@ -1,6 +1,8 @@
 <resources>
     <string name="app_name">urja\'22 admin</string>
     <string name="title_home">Home</string>
+    <string name="title_add_matches">Add Match</string>
+    <string name="title_update_matches">update Match</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
     <string name="title_leaderboard">Leaderboard</string>

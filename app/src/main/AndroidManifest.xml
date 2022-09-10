@@ -18,23 +18,32 @@
         android:theme="@style/Theme.Urja22Admin"
         tools:ignore="GoogleAppIndexingWarning">
         <activity
-            android:name=".UpdateMatchesActivity"
-            android:exported="false"
-            android:screenOrientation="portrait"/>
-        <activity
-            android:name=".AddMatchesActivity"
-            android:exported="false"
-            android:screenOrientation="portrait"/>
-        <activity
-            android:name=".MainActivity"
+            android:name=".LoginActivity"
             android:exported="true"
-            android:label="@string/app_name"
             android:screenOrientation="portrait">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name=".UpdateMatchesActivity"
+            android:exported="false"
+            android:label="@string/title_update_matches"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".AddMatchesActivity"
+            android:exported="false"
+            android:label="@string/title_add_matches"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait">
+
         </activity>
     </application>
 

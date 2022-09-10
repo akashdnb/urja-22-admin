@@ -200,6 +200,8 @@ public class UpdateMatchesActivity extends AppCompatActivity {
             case 0:
                 binding.tvt1s1.setText("Runs:");
                 binding.tvt2s1.setText("Runs:");
+                binding.etT1s1.setHint("Runs/wicket");
+                binding.etT2s1.setHint("Runs/wicket");
                 binding.layoutSet3.setVisibility(View.GONE);
                 break;
             case 1:

@@ -82,7 +82,7 @@ public class AddMatchesActivity extends AppCompatActivity {
         String tabNames[] = {"CRICKET", "FOOTBALL", "BASKETBALL", "VOLLEYBALL", "BADMINTON", "CHESS", "HOCKEY", "TABLE TENNIS", "ATHLETICS"};
 
         String key = RandomKey();
-        Fixtures fixtures= new Fixtures(key,type,team1,team2,roundName,"","","",false,false,date);
+        Fixtures fixtures= new Fixtures(key,type,team1,team2,roundName,"","","",binding.rbLive.isChecked(),binding.rbCompleted.isChecked(),date);
         myRef = database.getReference("matches").child(tabNames[type]).child("urja22").child(key);
         try {
             myRef.setValue(fixtures).addOnSuccessListener(new OnSuccessListener<Void>() {

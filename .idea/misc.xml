@@ -3,9 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/akash/AndroidStudioProjects/urja22admin/app/src/main/res/drawable/ic_outline_add.xml" value="0.125" />
         <entry key="..\:/Users/akash/AndroidStudioProjects/urja22admin/app/src/main/res/drawable/ic_round_add_circle_24.xml" value="0.109" />
         <entry key="..\:/Users/akash/AndroidStudioProjects/urja22admin/app/src/main/res/font/font.xml" value="0.20277777777777778" />
         <entry key="..\:/Users/akash/AndroidStudioProjects/urja22admin/app/src/main/res/layout/activity_add_matches.xml" value="0.1743659420289855" />
+        <entry key="..\:/Users/akash/AndroidStudioProjects/urja22admin/app/src/main/res/layout/activity_login.xml" value="0.16576086956521738" />
         <entry key="..\:/Users/akash/AndroidStudioProjects/urja22admin/app/src/main/res/layout/activity_main.xml" value="0.12" />
         <entry key="..\:/Users/akash/AndroidStudioProjects/urja22admin/app/src/main/res/layout/activity_update_matches.xml" value="0.1956521739130435" />
         <entry key="..\:/Users/akash/AndroidStudioProjects/urja22admin/app/src/main/res/layout/fragment_leaderboard.xml" value="0.13632246376811594" />
