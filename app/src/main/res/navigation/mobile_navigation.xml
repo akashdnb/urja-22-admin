@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_leaderboard">
+
+    <fragment
+        android:id="@+id/navigation_leaderboard"
+        android:name="com.nitjsr.urja22admin.ui.leaderboard.LeaderboardFragment"
+        tools:layout="@layout/fragment_leaderboard" />
+
+    <fragment
+        android:id="@+id/navigation_score"
+        android:name="com.nitjsr.urja22admin.ui.score.ScoreFragment"
+        android:label="@string/app_name"
+        tools:layout="@layout/fragment_score" />
+
+</navigation>
