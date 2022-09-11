@@ -83,7 +83,12 @@ public class MatchAdapter extends RecyclerView.Adapter<MatchAdapter.viewHolder>{
                         .setPositiveButton(R.string.delete, new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialogInterface, int i) {
-                                holder.deleteMatch(fixtureList.get(position).getType(),fixtureList.get(position).getUid());
+                                if(isNetworkConnected()==false){
+                                    Toast.makeText(context, "No Internet access !!", Toast.LENGTH_SHORT).show();
+                                    return;
+                                }else{
+                                    holder.deleteMatch(fixtureList.get(position).getType(),fixtureList.get(position).getUid());
+                                }
                             }
                         }).setNegativeButton(R.string.cancel, new DialogInterface.OnClickListener() {
                     @Override
@@ -145,10 +150,6 @@ public class MatchAdapter extends RecyclerView.Adapter<MatchAdapter.viewHolder>{
         }
 
         public void deleteMatch(int type, String uid) {
-            if(isNetworkConnected()==false){
-                Toast.makeText(context, "No Internet access !!", Toast.LENGTH_SHORT).show();
-                return;
-            }
             String tabNames[] = {"CRICKET", "FOOTBALL", "BASKETBALL", "VOLLEYBALL", "BADMINTON", "CHESS", "HOCKEY", "TABLE TENNIS", "ATHLETICS"};
             FirebaseDatabase database = FirebaseDatabase.getInstance();
             DatabaseReference myRef= database.getReference("matches").child(tabNames[type]).child("urja22").child(uid);

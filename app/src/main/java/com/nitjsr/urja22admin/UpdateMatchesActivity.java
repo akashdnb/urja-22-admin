@@ -8,6 +8,7 @@ import android.app.TimePickerDialog;
 import android.content.Intent;
 import android.net.ConnectivityManager;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.DatePicker;
 import android.widget.TimePicker;
@@ -48,6 +49,8 @@ public class UpdateMatchesActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding = ActivityUpdateMatchesBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
         database = FirebaseDatabase.getInstance();
         Intent intent = getIntent();
         int type = Integer.parseInt(intent.getStringExtra("type"));
@@ -101,8 +104,12 @@ public class UpdateMatchesActivity extends AppCompatActivity {
 
             }
         });
+    }
 
-
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        super.onBackPressed();
+        return super.onOptionsItemSelected(item);
     }
 
     private void getDate() {

@@ -8,6 +8,7 @@ import android.app.TimePickerDialog;
 import android.content.Intent;
 import android.net.ConnectivityManager;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.DatePicker;
 import android.widget.TimePicker;
@@ -44,6 +45,8 @@ public class AddMatchesActivity extends AppCompatActivity {
         binding= ActivityAddMatchesBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
         Intent intent = getIntent();
         type = Integer.parseInt(intent.getStringExtra("tabPosition"));
         myCalendar= Calendar.getInstance();
@@ -76,6 +79,12 @@ public class AddMatchesActivity extends AppCompatActivity {
             }
         });
 
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        super.onBackPressed();
+        return super.onOptionsItemSelected(item);
     }
 
     private void addMatch() {
